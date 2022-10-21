@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.primary-button {
+  background-color: black;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+}
+
+.header__logo {
+  width: 300px;
+}
+
+.research-restaurants__button {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
