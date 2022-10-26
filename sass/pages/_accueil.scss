@@ -1,11 +1,14 @@
 .research-restaurants{
     &__title{
-
+        text-align: center;
     }
     &__subtitle{
-
+        font-weight: 200;
+        text-align: center;
     }
     &__button{
         margin-top: 20px;
+        
+        
     }
 }

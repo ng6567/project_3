@@ -6,23 +6,53 @@
   box-sizing: inherit;
 }
 
-body {
+html body {
   max-width: 1300px;
   margin: auto;
+  font-family: roboto;
 }
 
 .primary-button {
-  background-color: black;
   padding: 10px;
   border-radius: 30px;
   border: none;
   color: white;
+  background: linear-gradient(#9356DC, #FF79DA);
 }
 
 .header__logo {
-  width: 300px;
+  width: 150px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+form i.fa-location-dot {
+  position: absolute;
+  padding-left: 40px;
+  padding-top: 13px;
+}
+form input {
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: rgb(233, 228, 228);
+  font-weight: bold;
+  border: none;
+}
+form ::-webkit-input-placeholder {
+  color: black;
+  text-align: center;
+}
+
+.research-restaurants__title {
+  text-align: center;
+}
+.research-restaurants__subtitle {
+  font-weight: 200;
+  text-align: center;
+}
 .research-restaurants__button {
   margin-top: 20px;
 }

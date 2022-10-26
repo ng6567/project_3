@@ -1,0 +1,24 @@
+form {
+    & i.fa-location-dot {
+        position: absolute;
+        padding-left: 40px;
+        padding-top:13px;
+    }
+
+    & input {
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: rgb(233, 228, 228);
+        font-weight: bold;
+        border:none;
+        
+    }
+
+    & ::-webkit-input-placeholder {
+        color: black;
+        text-align: center;
+
+    }
+
+}
