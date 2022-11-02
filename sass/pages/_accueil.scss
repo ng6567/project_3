@@ -1,14 +1,96 @@
-.research-restaurants{
-    &__title{
+.research-restaurants {
+    background-color: rgb(245, 245, 243);
+    padding-bottom: 20px;
+
+    &__title {
         text-align: center;
+        margin: 0px 40px 10px 40px;
+        padding-top: 20px;
+        font-size: 27px;
     }
-    &__subtitle{
+
+    &__subtitle {
         font-weight: 200;
         text-align: center;
+        padding: 2% 10% 2% 10%;
     }
-    &__button{
-        margin-top: 20px;
-        
-        
+
+    &__button {
+        margin: 5% 20% 5% 20%;
+        font-size: 15px;
+
+    }
+
+}
+
+.section-1 {
+    &__second-title {
+        margin: 40px 30px 30px 20px;
+    }
+
+    .function-1 {
+
+        i.fa-mobile-screen-button {
+            @include symbole-accueil;
+            color: gray;
+        }
+
+        i.fa-1 {
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 30px;
+            @include number-accueil;
+        }
+
+
+
+        i.fa-list-ul {
+            @include symbole-accueil;
+            color: gray;
+
+        }
+
+        i.fa-2 {
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 30px;
+            @include number-accueil;
+        }
+
+        i.fa-store {
+            @include symbole-accueil;
+            color: $color-primary;
+        }
+
+        i.fa-3 {
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 30px;
+            @include number-accueil;
+        }
+
+        &__button {
+            margin: 20px 10px 20px 30px;
+            font-weight: bold;
+        }
+    }
+}
+
+.section-2 {
+    background-color: rgb(245, 245, 243);
+    margin: auto;
+
+    &__second-title {
+        margin: 40px 30px 30px 20px;
+        padding-top: 50px;
+    }
+
+    .the-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .heart {
+        padding-top: 20px;
+        font-size: 30px;
     }
 }

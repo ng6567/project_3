@@ -12,15 +12,17 @@
 
 // Components
 @import "./components/buttons";
+@import "./components/card";
 
 // Layout
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form";
+@import "./layout/footer";
 
 // Pages
 @import "./pages/accueil";
-@import "./pages/page2";
+@import "./pages/menus";
 
 // Themes

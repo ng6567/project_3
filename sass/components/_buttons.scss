@@ -1,8 +1,41 @@
 .primary-button{
     
-    padding: 10px;
+    padding: 20px;
     border-radius: 30px;
     border: none;
     color: white;
+    text-align: center;
    @include primary-button-radient-colour;
+}
+
+.function-button{
+    width: 80%;
+    padding: 25px;
+    border-radius: 14px;
+    border: none;
+    -webkit-box-shadow: 8px 8px 12px #E6E1E1;
+    box-shadow: 8px 8px 12px #E6E1E1; 
+
+    @media screen and (min-width: map-get($breakpoints, sm)){
+        width: 85%;
+    }
+    
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        width: 90%;
+    }
+    }
+      
+
+.promo-button{
+    background-color: $color-third;
+    padding: 7px;
+    
+    
+}
+
+.choice-button{
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
 }

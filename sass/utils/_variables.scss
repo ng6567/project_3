@@ -1,3 +1,10 @@
 $color-primary:#9356DC;
 $color-secondary:#FF79DA ;
 $color-third:#99E2D0;
+$breakpoints: (
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
+$color-background:rgb(233, 228, 228);

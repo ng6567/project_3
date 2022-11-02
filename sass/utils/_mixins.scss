@@ -1,3 +1,24 @@
 @mixin primary-button-radient-colour {
-   background:linear-gradient(#9356DC,#FF79DA )
+   background: linear-gradient(#FF79DA, #9356DC)
 }
+
+@mixin symbole-accueil {
+   font-size: 20px;
+   position: absolute;
+   padding-left: 77px;
+   padding-top: 43px;
+}
+
+@mixin number-accueil {
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color:$color-primary;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 12px;
+ 
+}
+
