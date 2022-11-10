@@ -8,6 +8,7 @@
 
 body {
   max-width: 1300px;
+  min-width: 400px;
   margin: auto;
   font-family: roboto;
 }
@@ -18,26 +19,25 @@ body {
   border: none;
   color: white;
   text-align: center;
+  cursor: pointer;
   background: linear-gradient(#FF79DA, #9356DC);
+}
+.primary-button:hover {
+  opacity: 0.75;
+  box-shadow: 0px 10px 14px -5px rgba(0, 0, 0, 0.3);
 }
 
 .function-button {
-  width: 80%;
+  width: 90%;
   padding: 25px;
   border-radius: 14px;
   border: none;
   -webkit-box-shadow: 8px 8px 12px #E6E1E1;
   box-shadow: 8px 8px 12px #E6E1E1;
+  cursor: pointer;
 }
-@media screen and (min-width: 768px) {
-  .function-button {
-    width: 85%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .function-button {
-    width: 90%;
-  }
+.function-button:hover {
+  background-color: #f5edff;
 }
 
 .promo-button {
@@ -53,6 +53,7 @@ body {
 }
 
 .card {
+  position: relative;
   background-color: white;
   margin: 20px;
   border-radius: 30px;
@@ -74,8 +75,8 @@ body {
 }
 .card .card__button {
   position: absolute;
-  right: 10%;
-  margin-top: 5%;
+  right: 5%;
+  margin-top: 2%;
   color: #119E7B;
   font-weight: bold;
 }
@@ -95,6 +96,19 @@ body {
 .card .card-content .byline__paragraphe {
   padding-left: 10px;
   padding-bottom: 20px;
+}
+.card:hover {
+  box-shadow: #119E7B;
+}
+
+.heart {
+  cursor: pointer;
+}
+.heart .fullheart {
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .header__logo {
@@ -130,7 +144,7 @@ form ::-webkit-input-placeholder {
 }
 
 .footer {
-  background-color: black;
+  background-color: #363636;
   color: white;
 }
 .footer__logo {
@@ -138,14 +152,31 @@ form ::-webkit-input-placeholder {
   width: 25%;
   padding: 20px;
 }
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    padding: 20px 40px 20px 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer__logo {
+    padding-left: 100px;
+  }
+}
 .footer__list li {
   padding: 0px 20px 10px 20px;
 }
-.footer__list li .fa-utensils {
-  padding-right: 15px;
+@media screen and (min-width: 768px) {
+  .footer__list li {
+    padding: 0px 40px 10px 70px;
+  }
 }
-.footer__list li .fa-handshake-simple {
-  padding-right: 15px;
+@media screen and (min-width: 992px) {
+  .footer__list li {
+    padding-left: 100px;
+  }
+}
+.footer__list li i {
+  width: 30px;
 }
 .footer__list a {
   text-decoration: none;
@@ -175,17 +206,22 @@ form ::-webkit-input-placeholder {
 .section-1__second-title {
   margin: 40px 30px 30px 20px;
 }
+@media screen and (min-width: 768px) {
+  .section-1__second-title {
+    padding: 20px 40px 10px 70px;
+  }
+}
+.section-1 .function-1:hover > span:nth-child(2) > i {
+  color: #9356DC;
+}
 .section-1 .function-1 i.fa-mobile-screen-button {
   font-size: 20px;
   position: absolute;
   padding-left: 77px;
   padding-top: 43px;
-  color: gray;
+  color: grey;
 }
 .section-1 .function-1 i.fa-1 {
-  position: absolute;
-  margin-top: 40px;
-  margin-left: 30px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -195,18 +231,19 @@ form ::-webkit-input-placeholder {
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  left: -10px;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 30px;
 }
 .section-1 .function-1 i.fa-list-ul {
   font-size: 20px;
   position: absolute;
   padding-left: 77px;
   padding-top: 43px;
-  color: gray;
+  color: grey;
 }
 .section-1 .function-1 i.fa-2 {
-  position: absolute;
-  margin-top: 40px;
-  margin-left: 30px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -216,18 +253,19 @@ form ::-webkit-input-placeholder {
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  left: -10px;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 30px;
 }
 .section-1 .function-1 i.fa-store {
   font-size: 20px;
   position: absolute;
   padding-left: 77px;
   padding-top: 43px;
-  color: #9356DC;
+  color: grey;
 }
 .section-1 .function-1 i.fa-3 {
-  position: absolute;
-  margin-top: 40px;
-  margin-left: 30px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -237,6 +275,10 @@ form ::-webkit-input-placeholder {
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  left: -10px;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 30px;
 }
 .section-1 .function-1__button {
   margin: 20px 10px 20px 30px;
@@ -257,7 +299,11 @@ form ::-webkit-input-placeholder {
 }
 .section-2 .heart {
   padding-top: 20px;
+  padding-right: 20px;
   font-size: 30px;
+}
+.section-2 .emptyheart {
+  position: absolute;
 }
 
 .header .fa-arrow-left {
@@ -296,11 +342,24 @@ form ::-webkit-input-placeholder {
   position: relative;
   padding: 15% 0 6% 3%;
 }
+.Menus .Menu__second-title::after {
+  content: "";
+  display: block;
+  background-color: #99E2D0;
+  width: 30px;
+  height: 3px;
+  margin-top: 5px;
+}
+.Menus .all-section-Menus {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
 .Menus .menu__button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto;
+  margin: 2%;
 }
 .Menus .menu__button .menu-paragraphe {
   padding-left: 3%;
@@ -317,10 +376,21 @@ form ::-webkit-input-placeholder {
   font-size: 15px;
 }
 .Menus .menu__button .menu__byline {
-  flex-direction: row;
+  cursor: pointer;
 }
 .Menus .menu__button .menu__byline .price {
-  padding: 30px 15px 0 0;
+  display: inline-block;
+}
+.Menus .menu__button .menu__byline .container-check {
+  padding: 20px 40px 15px 15px;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+}
+.Menus .menu__button .menu__byline .container-check .fa-circle-check {
+  font-size: 40px;
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50%;
 }
 .Menus .Menus__button {
   margin: 10% 50% 10% 20%;

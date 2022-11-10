@@ -1,24 +1,35 @@
 .footer {
-    background-color: black;
+    background-color: $color-dark;
     color: white;
 
     &__logo{
         filter: invert(1);
         width: 25%;
         padding: 20px;
+        
+        @media screen and (min-width: map-get($breakpoints, sm)){
+            padding: 20px 40px 20px 70px;
+            }
+        
+        @media screen and (min-width: map-get($breakpoints, md)){
+            padding-left: 100px;
+            }
+        
     }
 
     &__list{
         li {
             padding: 0px 20px 10px 20px;
-
-            .fa-utensils{
-                padding-right: 15px;
+            @media screen and (min-width: map-get($breakpoints, sm)){
+                padding: 0px 40px 10px 70px;
+                }
+            @media screen and (min-width: map-get($breakpoints, md)){
+                padding-left: 100px;
+                }
+            i{
+                width: 30px;
             }
 
-            .fa-handshake-simple{
-                padding-right: 15px;
-            }
         }
 
         a {

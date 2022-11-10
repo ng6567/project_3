@@ -1,4 +1,5 @@
 .card {
+    position: relative;
     background-color: white;
     margin: 20px;
     border-radius: 30px;
@@ -21,8 +22,8 @@
 
     .card__button {
         position: absolute;
-        right: 10%;
-        margin-top: 5%;
+        right: 5%;
+        margin-top: 2%;
         color: #119E7B;
         font-weight: bold;
 
@@ -51,6 +52,10 @@
                 padding-bottom: 20px;
             }
         }
+    }
+
+    &:hover{
+        box-shadow: #119E7B;
     }
 
 }

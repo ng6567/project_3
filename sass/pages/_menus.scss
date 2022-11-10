@@ -17,14 +17,14 @@
 .Menus {
     background-color: rgb(245, 245, 243);
 
-    .fa-heart{
+    .fa-heart {
         position: absolute;
         left: 84%;
         font-size: 27px;
         bottom: 44%;
-        
+
     }
-   
+
 
     &__title {
         font-family: Shrikhand;
@@ -34,60 +34,99 @@
         border-radius: 30px 30px 0px 0px;
         padding-top: 5%;
         padding-left: 3%;
-        width:97%;
+        width: 97%;
         background-color: rgb(245, 245, 243);
 
 
     }
 
-    .Menu{
+    .Menu {
 
-        &__second-title{
+        &__second-title {
             position: relative;
-            padding:15% 0 6% 3%;
+            padding: 15% 0 6% 3%;
+            
         }
+        &__second-title::after {
+            content: "";
+            display: block;
+            background-color: #99E2D0;
+            width: 30px;
+            height: 3px;
+            margin-top: 5px;
+            
+        }
+        
+
+    }
+    
+
+
+    .all-section-Menus {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
     }
 
-    .menu__button{
+    .menu__button {
 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: auto;
+        margin: 2%;
 
-       .menu-paragraphe{
+
+        .menu-paragraphe {
             padding-left: 3%;
             display: flex;
             flex-direction: column;
         }
 
-        .p1{
+        .p1 {
             font-weight: bold;
             padding: 4% 0 2% 0;
             font-size: 18px;
         }
 
-        .p2{
+        .p2 {
             padding: 0 0 2% 0;
             font-size: 15px;
         }
 
-        .menu__byline{
-            
-            flex-direction: row;
+        .menu__byline {
+            cursor: pointer;
 
-            .price{
-                padding: 30px 15px 0 0;
+
+            .price {
+                display: inline-block;
+            }
+
+            .container-check {
+                padding: 20px 40px 15px 15px;
+                background-color: #99E2D0;
+                border-radius: 0 20px 20px 0;
+
+                .fa-circle-check {
+                    font-size: 40px;
+                    background-color: white;
+                    color: #99E2D0;
+                    border-radius: 50%;
+   
+                    
+
+
+                }
+
             }
         }
     }
 
-    .Menus__button{
+    .Menus__button {
         margin: 10% 50% 10% 20%;
-       width: 50%;
+        width: 50%;
     }
-    
-    .fa-check{
+
+    .fa-check {
         padding-left: 2px;
     }
 }

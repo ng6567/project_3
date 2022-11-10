@@ -1,0 +1,9 @@
+.heart{
+    cursor: pointer;
+    .fullheart{
+       color: transparent;
+        @include primary-button-radient-colour;
+        background-clip: text;
+        -webkit-background-clip: text;
+}
+}
