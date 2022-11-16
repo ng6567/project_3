@@ -1,9 +1,27 @@
-.heart{
-    cursor: pointer;
-    .fullheart{
-       color: transparent;
-        @include primary-button-radient-colour;
-        background-clip: text;
-        -webkit-background-clip: text;
+.heart {
+  cursor: pointer;
+  position: relative;
+  font-size: 40px;
+
+  :nth-child(2) {
+    color: transparent;
+  }
+
+  & :hover {
+    color: $color-secondary;
+    transition: all 550ms ease-in-out;
+    transition-duration: 500ms;
+    padding: 0px;
+
+  }
 }
+
+
+.fa-heart {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+
+
+
 }

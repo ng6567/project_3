@@ -17,62 +17,136 @@
 
     &__button {
         margin: 5% 20% 5% 20%;
-        font-size: 15px;
+        font-size: 14px;
 
+        @media screen and (min-width: map-get($breakpoints, sm)) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: map-get($breakpoints, md)) {
+            font-size: 20px;
+        }
+        @media screen and (min-width: map-get($breakpoints, lg)) {
+            font-size: 22px;
+        }
     }
 
 }
 
 .section-1 {
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+        display: flex;
+        flex-direction: row;
+    }
+
     &__second-title {
         margin: 40px 30px 30px 20px;
 
-        @media screen and (min-width: map-get($breakpoints, sm)){
-            padding: 20px 40px 10px 70px;
-            }
+
     }
 
     .function-1 {
-        &:hover{
-            >span:nth-child(2)>i{
-                color: $color-primary;
-            }
-        }
+        display: flex;
+        justify-content: center;
+
+
 
         i.fa-mobile-screen-button {
             @include symbole-accueil;
-           
+
+            @media screen and (min-width: map-get($breakpoints, sm)) {
+                left: 67px;
+                top: 54px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, md)) {
+                left: 95px;
+                top: 65px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, lg)) {
+                left: 125px;
+                top: 55px;
+            }
         }
 
         i.fa-1 {
             @include number-accueil;
+
         }
 
 
 
         i.fa-list-ul {
             @include symbole-accueil;
-            
 
+            @media screen and (min-width: map-get($breakpoints, sm)) {
+                left: 67px;
+                top: 54px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, md)) {
+                left: 95px;
+                top: 65px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, lg)) {
+                left: 125px;
+                top: 55px;
+            }
         }
 
         i.fa-2 {
             @include number-accueil;
+
         }
 
         i.fa-store {
             @include symbole-accueil;
-            
+
+            @media screen and (min-width: map-get($breakpoints, sm)) {
+                left: 67px;
+                top: 54px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, md)) {
+                left: 95px;
+                top: 65px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, lg)) {
+                left: 125px;
+                top: 55px;
+            }
         }
 
         i.fa-3 {
             @include number-accueil;
+
         }
 
         &__button {
             margin: 20px 10px 20px 30px;
             font-weight: bold;
+            &:hover{
+                box-shadow:10px 5px 5px grayscale($color: #000000)
+            
+            }
+
+
+
+            @media screen and (min-width: map-get($breakpoints, sm)) {
+                font-size: 12px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, md)) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: map-get($breakpoints, lg)) {
+                font-size: 22px;
+            }
         }
+
     }
 }
 
@@ -83,22 +157,51 @@
     &__second-title {
         margin: 40px 30px 30px 20px;
         padding-top: 50px;
-       
+
     }
 
-    .the-cards{
+    .the-cards {
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width: map-get($breakpoints, sm)) {
+            flex-direction: row;
+
+        }
     }
+
     .heart {
-        padding-top: 20px;
-        padding-right: 20px;
+
         font-size: 30px;
+
+        @media screen and (min-width: map-get($breakpoints, sm)) {
+            font-size: 18px;
+
+        }
+
+        @media screen and (min-width: map-get($breakpoints, md)) {
+            font-size: 25px;
+
+        }
+
+        @media screen and (min-width: map-get($breakpoints, lg)) {
+            font-size: 30px;
+
+        }
     }
 
-    .emptyheart{
+    .fa-heart {
         position: absolute;
+        bottom: 25px;
+        right: 20px;
+
+
+        @media screen and (min-width: map-get($breakpoints, sm)) {
+            bottom: 20px;
+
+        }
+
     }
 
-    
+
 }

@@ -1,45 +1,104 @@
-.primary-button{
-    
+.primary-button {
+
     padding: 20px;
     border-radius: 30px;
     border: none;
     color: white;
     text-align: center;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         opacity: 0.75;
         box-shadow: 0px 10px 14px -5px rgb(0 0 0 / 30%);
     }
 
-   @include primary-button-radient-colour;
+    @include primary-button-radient-colour;
 }
 
-.function-button{
-    width: 90%;
+.function-button {
+    position: relative;
+    width: 85%;
+    max-width: 280px;
     padding: 25px;
     border-radius: 14px;
     border: none;
     -webkit-box-shadow: 8px 8px 12px #E6E1E1;
-    box-shadow: 8px 8px 12px #E6E1E1; 
+    box-shadow: 8px 8px 12px #E6E1E1;
     cursor: pointer;
-    &:hover{
-        background-color: #f5edff;
+
+    &:hover {
+        background-color: 10px 5px 5px white;
+
     }
 
-   
+    @media screen and (min-width: map-get($breakpoints, xs)) {
+        width: 90%;
+        max-width: 400px;
     }
-      
 
-.promo-button{
-    background-color: $color-third;
-    padding: 7px;
-    
-    
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+        width: 90%;
+        max-width: 550px;
+    }
+
+
 }
 
-.choice-button{
+
+
+
+
+.promo-button {
+    background-color: $color-third;
+    padding: 7px;
+
+
+}
+
+.choice-button {
     width: 90%;
+    height: 85px;
     background-color: white;
     border-radius: 20px;
     border: none;
+
+}
+
+.container-check {
+    background-color: #99E2D0;
+    border-radius: 0 20px 20px 0;
+    width: 70px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation-name: checker;
+    transition-duration: 1000ms;
+    transition-delay: 300ms;
+    transform: translateX(40px);
+    text-overflow: ellipsis;
+    
+    
+
+    &:hover {
+        opacity: 1;
+        transform: translateX(10px);
+        cursor: pointer;
+    }
+
+}
+
+
+.fa-circle-check {
+    font-size: 40px;
+    background-color: white;
+    color: #99E2D0;
+    border-radius: 50%;
+
+
+
+
 }

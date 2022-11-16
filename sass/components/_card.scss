@@ -5,15 +5,12 @@
     border-radius: 30px;
     margin-bottom: 20px;
 
-    @media screen and (min-width: map-get($breakpoints, sm)){
-    margin: 20px 70px 40px 70px;
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+        width: 30%;
+
     }
 
-    @media screen and (min-width: map-get($breakpoints, md)){
-    margin: 20px 100px 40px 100px;
-    } 
 
-    
 
     a {
         text-decoration: none;
@@ -22,11 +19,21 @@
 
     .card__button {
         position: absolute;
-        right: 5%;
-        margin-top: 2%;
+        right: 20px;
+        margin-top: 20px;
         color: #119E7B;
         font-weight: bold;
 
+        @media screen and (min-width: map-get($breakpoints, xs)) {
+            margin-top: 0;
+            right: 33px;
+        }
+        @media screen and (min-width: map-get($breakpoints, md)) {          
+            right: 65px;
+        }
+        @media screen and (min-width: map-get($breakpoints, lg)) {           
+            right: 87px;
+        }
     }
 
     &__img {
@@ -34,6 +41,12 @@
         height: 170px;
         object-fit: cover;
         border-radius: 30px 30px 0 0;
+
+        @media screen and (min-width: map-get($breakpoints, sm)) {
+            border-radius: 0;
+
+        }
+
     }
 
     .card-content {
@@ -41,21 +54,42 @@
         justify-content: space-between;
 
 
+
         .byline {
 
             &__third-title {
                 padding: 10px 0px 5px 10px;
+
+                @media screen and (min-width: map-get($breakpoints, sm)) {
+                    font-size: 15px;
+
+                }
+                
+                @media screen and (min-width: map-get($breakpoints, md)) {
+                    font-size: 18px;
+
+                }
             }
 
             &__paragraphe {
                 padding-left: 10px;
                 padding-bottom: 20px;
+
+                @media screen and (min-width: map-get($breakpoints, sm)) {
+                    font-size: 13px;
+
+                }
+
+                @media screen and (min-width: map-get($breakpoints, md)) {
+                    font-size: 18px;
+
+                }
             }
         }
     }
 
-    &:hover{
-        box-shadow: #119E7B;
+    &:hover {
+        box-shadow: 10px 10px 10px lightgray;
     }
 
 }
