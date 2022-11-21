@@ -1,11 +1,11 @@
 @keyframes appear {
   from {
-    transform: translateY(-100px);
+    transform: translateY(0px);
     opacity: 0;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(100px);
   }
 }
 *,
@@ -41,27 +41,21 @@ body {
   position: relative;
   width: 85%;
   max-width: 280px;
+  min-width: 225px;
+  text-align: right;
   padding: 25px;
   border-radius: 14px;
   border: none;
   -webkit-box-shadow: 8px 8px 12px #E6E1E1;
   box-shadow: 8px 8px 12px #E6E1E1;
+  font-weight: bold;
   cursor: pointer;
 }
 .function-button:hover {
-  background-color: 10px 5px 5px white;
+  background-color: #f5edff;
 }
-@media screen and (min-width: 576px) {
-  .function-button {
-    width: 90%;
-    max-width: 400px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .function-button {
-    width: 90%;
-    max-width: 550px;
-  }
+.function-button:hover > i.fa-icone {
+  color: #9356DC !important;
 }
 
 .promo-button {
@@ -83,7 +77,6 @@ body {
   width: 70px;
   margin-top: -10px;
   margin-bottom: -10px;
-  margin-right: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +84,6 @@ body {
   animation-name: checker;
   transition-duration: 1000ms;
   transition-delay: 300ms;
-  transform: translateX(40px);
-  text-overflow: ellipsis;
 }
 .container-check:hover {
   opacity: 1;
@@ -129,22 +120,6 @@ body {
   margin-top: 20px;
   color: #119E7B;
   font-weight: bold;
-}
-@media screen and (min-width: 576px) {
-  .card .card__button {
-    margin-top: 0;
-    right: 33px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .card .card__button {
-    right: 65px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .card .card__button {
-    right: 87px;
-  }
 }
 .card__img {
   width: 100%;
@@ -352,6 +327,9 @@ form ::-webkit-input-placeholder {
   }
 }
 
+.section-1 {
+  flex-wrap: wrap;
+}
 @media screen and (min-width: 768px) {
   .section-1 {
     display: flex;
@@ -360,6 +338,7 @@ form ::-webkit-input-placeholder {
 }
 .section-1__second-title {
   margin: 40px 30px 30px 20px;
+  width: 100%;
 }
 .section-1 .function-1 {
   display: flex;
@@ -370,27 +349,6 @@ form ::-webkit-input-placeholder {
   position: absolute;
   left: 39px;
   color: grey;
-}
-.section-1 .function-1 i.fa-mobile-screen-button:hover {
-  color: #FF79DA;
-}
-@media screen and (min-width: 768px) {
-  .section-1 .function-1 i.fa-mobile-screen-button {
-    left: 67px;
-    top: 54px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section-1 .function-1 i.fa-mobile-screen-button {
-    left: 95px;
-    top: 65px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section-1 .function-1 i.fa-mobile-screen-button {
-    left: 125px;
-    top: 55px;
-  }
 }
 .section-1 .function-1 i.fa-1 {
   width: 25px;
@@ -405,35 +363,11 @@ form ::-webkit-input-placeholder {
   left: -10px;
   position: absolute;
 }
-.section-1 .function-1 i.fa-1:hover {
-  background-color: #FF79DA;
-}
 .section-1 .function-1 i.fa-list-ul {
   font-size: 20px;
   position: absolute;
   left: 39px;
   color: grey;
-}
-.section-1 .function-1 i.fa-list-ul:hover {
-  color: #FF79DA;
-}
-@media screen and (min-width: 768px) {
-  .section-1 .function-1 i.fa-list-ul {
-    left: 67px;
-    top: 54px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section-1 .function-1 i.fa-list-ul {
-    left: 95px;
-    top: 65px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section-1 .function-1 i.fa-list-ul {
-    left: 125px;
-    top: 55px;
-  }
 }
 .section-1 .function-1 i.fa-2 {
   width: 25px;
@@ -448,35 +382,11 @@ form ::-webkit-input-placeholder {
   left: -10px;
   position: absolute;
 }
-.section-1 .function-1 i.fa-2:hover {
-  background-color: #FF79DA;
-}
 .section-1 .function-1 i.fa-store {
   font-size: 20px;
   position: absolute;
   left: 39px;
   color: grey;
-}
-.section-1 .function-1 i.fa-store:hover {
-  color: #FF79DA;
-}
-@media screen and (min-width: 768px) {
-  .section-1 .function-1 i.fa-store {
-    left: 67px;
-    top: 54px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section-1 .function-1 i.fa-store {
-    left: 95px;
-    top: 65px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section-1 .function-1 i.fa-store {
-    left: 125px;
-    top: 55px;
-  }
 }
 .section-1 .function-1 i.fa-3 {
   width: 25px;
@@ -491,30 +401,8 @@ form ::-webkit-input-placeholder {
   left: -10px;
   position: absolute;
 }
-.section-1 .function-1 i.fa-3:hover {
-  background-color: #FF79DA;
-}
 .section-1 .function-1__button {
   margin: 20px 10px 20px 30px;
-  font-weight: bold;
-}
-.section-1 .function-1__button:hover {
-  box-shadow: 10px 5px 5px black;
-}
-@media screen and (min-width: 768px) {
-  .section-1 .function-1__button {
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section-1 .function-1__button {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section-1 .function-1__button {
-    font-size: 22px;
-  }
 }
 
 .section-2 {
@@ -583,7 +471,7 @@ form ::-webkit-input-placeholder {
 .Menus .subheader_menus {
   border-top-left-radius: 40px 40px;
   border-top-right-radius: 40px 40px;
-  transform: translateY(-80px);
+  transform: translateY(-75px);
   margin-bottom: -80px;
   background-color: #f6f6f6;
   font-family: shrikhand, cursive;
@@ -594,7 +482,7 @@ form ::-webkit-input-placeholder {
 }
 .Menus .subheader_menus__title {
   font-family: Shrikhand;
-  padding: 20px;
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 992px) {
@@ -674,120 +562,49 @@ form ::-webkit-input-placeholder {
   }
 }
 
-.menu__button__entrees {
+.menu__bouton {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 5%;
   padding: 10px;
   animation-name: appear;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
 }
-.menu__button__entrees .allmenus {
+.menu__bouton .allmenus {
   display: flex;
   justify-content: space-between;
   padding-right: 10px;
   width: 100%;
 }
-.menu__button__entrees .menu-paragraphe {
+.menu__bouton .menu-paragraphe {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.menu__button__entrees .p1 {
+.menu__bouton .p1 {
   font-weight: bold;
   padding: 4% 0 2% 0;
   font-size: 18px;
 }
-.menu__button__entrees .p2 {
+.menu__bouton .p2 {
   padding: 0 0 2% 0;
   font-size: 15px;
 }
-.menu__button__entrees .menu__byline {
+.menu__bouton .menu__byline {
   align-items: flex-end;
   display: flex;
 }
-.menu__button__entrees .menu__byline .price {
+.menu__bouton .menu__byline .price {
   display: inline-block;
 }
 
 .menu__button__plats {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5%;
-  padding: 10px;
-  animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
   animation-delay: 300ms;
-}
-.menu__button__plats .allmenus {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 10px;
-  width: 100%;
-}
-.menu__button__plats .menu-paragraphe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.menu__button__plats .p1 {
-  font-weight: bold;
-  padding: 4% 0 2% 0;
-  font-size: 18px;
-}
-.menu__button__plats .p2 {
-  padding: 0 0 2% 0;
-  font-size: 15px;
-}
-.menu__button__plats .menu__byline {
-  align-items: flex-end;
-  display: flex;
-}
-.menu__button__plats .menu__byline .price {
-  display: inline-block;
 }
 
 .menu__button__desserts {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5%;
-  padding: 10px;
-  animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
   animation-delay: 600ms;
-}
-.menu__button__desserts .allmenus {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 10px;
-  width: 100%;
-}
-.menu__button__desserts .menu-paragraphe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.menu__button__desserts .p1 {
-  font-weight: bold;
-  padding: 4% 0 2% 0;
-  font-size: 18px;
-}
-.menu__button__desserts .p2 {
-  padding: 0 0 2% 0;
-  font-size: 15px;
-}
-.menu__button__desserts .menu__byline {
-  align-items: flex-end;
-  display: flex;
-}
-.menu__button__desserts .menu__byline .price {
-  display: inline-block;
 }
 
 .Menus__button {

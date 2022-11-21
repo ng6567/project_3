@@ -26,7 +26,7 @@
     .subheader_menus {
         border-top-left-radius: 40px 40px;
         border-top-right-radius: 40px 40px;
-        transform: translateY(-80px);
+        transform: translateY(-75px);
         margin-bottom: -80px;
         background-color: #f6f6f6;
         font-family: shrikhand, cursive;
@@ -37,7 +37,7 @@
 
         &__title {
             font-family: Shrikhand;
-            padding: 20px;
+            padding-left: 20px;
 
         }
 
@@ -101,32 +101,26 @@
         flex-direction: row;
     }
 }
-
-.menu__button__entrees {
-
-
+.menu__bouton{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5%;
     padding: 10px;
     @include move-animation;
-
 
     .allmenus {
         display: flex;
         justify-content: space-between;
         padding-right: 10px;
         width: 100%;
-    }
 
+    }
     .menu-paragraphe {
 
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     .p1 {
         font-weight: bold;
         padding: 4% 0 2% 0;
@@ -138,7 +132,6 @@
         font-size: 15px;
        
     }
-
     .menu__byline {
         align-items: flex-end;
         display: flex;
@@ -153,98 +146,15 @@
 
 .menu__button__plats {
 
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5%;
-    padding: 10px;
-    @include move-animation;
     animation-delay: 300ms;
 
-    .allmenus {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 10px;
-        width: 100%;
-    }
-
-    .menu-paragraphe {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .p1 {
-        font-weight: bold;
-        padding: 4% 0 2% 0;
-        font-size: 18px;
-    }
-
-    .p2 {
-        padding: 0 0 2% 0;
-        font-size: 15px;
-    }
-
-    .menu__byline {
-        align-items: flex-end;
-        display: flex;
-
-
-        .price {
-            display: inline-block;
-        }
-
-    }
+    
 }
 
 .menu__button__desserts {
-
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5%;
-    padding: 10px;
-    @include move-animation;
+    
     animation-delay: 600ms;
 
-    .allmenus {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 10px;
-        width: 100%;
-    }
-
-    .menu-paragraphe {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .p1 {
-        font-weight: bold;
-        padding: 4% 0 2% 0;
-        font-size: 18px;
-    }
-
-    .p2 {
-        padding: 0 0 2% 0;
-        font-size: 15px;
-    }
-
-    .menu__byline {
-        align-items: flex-end;
-        display: flex;
-
-
-        .price {
-            display: inline-block;
-        }
-
-    }
 }
 
 .Menus__button {

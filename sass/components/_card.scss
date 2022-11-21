@@ -24,16 +24,7 @@
         color: #119E7B;
         font-weight: bold;
 
-        @media screen and (min-width: map-get($breakpoints, xs)) {
-            margin-top: 0;
-            right: 33px;
-        }
-        @media screen and (min-width: map-get($breakpoints, md)) {          
-            right: 65px;
-        }
-        @media screen and (min-width: map-get($breakpoints, lg)) {           
-            right: 87px;
-        }
+        
     }
 
     &__img {

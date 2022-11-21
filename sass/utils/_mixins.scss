@@ -8,9 +8,7 @@
    left: 39px;
    color: grey;
 
-   &:hover {
-      color: $color-secondary;
-   }
+  
 }
 
 
@@ -27,10 +25,7 @@
    left: -10px;
    position: absolute;
 
-   &:hover {
-      background-color: $color-secondary;
-
-   }
+  
 
 }
 
@@ -61,12 +56,12 @@
 }
 @keyframes appear {
    from {
-     transform: translateY(-100px);
+     transform: translateY(0px);
      opacity: 0;
    }
    to {
      opacity: 1;
-     transform: translateY(0);
+     transform: translateY(100px);
    }
  }
 

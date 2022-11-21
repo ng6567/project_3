@@ -19,28 +19,25 @@
     position: relative;
     width: 85%;
     max-width: 280px;
+    min-width: 225px;
+    text-align: right;
     padding: 25px;
     border-radius: 14px;
     border: none;
     -webkit-box-shadow: 8px 8px 12px #E6E1E1;
     box-shadow: 8px 8px 12px #E6E1E1;
+    font-weight: bold;
     cursor: pointer;
-
-    &:hover {
-        background-color: 10px 5px 5px white;
-
+    &:hover{
+        background-color: #f5edff;
+        >i.fa-icone {
+            color:$color-primary !important;
+        }
+    
     }
-
-    @media screen and (min-width: map-get($breakpoints, xs)) {
-        width: 90%;
-        max-width: 400px;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, sm)) {
-        width: 90%;
-        max-width: 550px;
-    }
-
+   
+    
+  
 
 }
 
@@ -70,7 +67,7 @@
     width: 70px;
     margin-top: -10px;
     margin-bottom: -10px;
-    margin-right: -10px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,8 +75,7 @@
     animation-name: checker;
     transition-duration: 1000ms;
     transition-delay: 300ms;
-    transform: translateX(40px);
-    text-overflow: ellipsis;
+    
     
     
 
