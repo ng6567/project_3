@@ -69,43 +69,23 @@
     @include second-title;
 }
 
-
-
-.all-section-menu-entrees {
+.all-section-Menus{
     display: flex;
     flex-direction: column;
-    margin-left: 2%;
-
-    @media screen and (min-width: map-get($breakpoints, md)) {
-        flex-direction: row;
-    }
-
+    align-items: center;
 }
 
-.all-section-menu-plats {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2%;
 
-    @media screen and (min-width: map-get($breakpoints, md)) {
-        flex-direction: row;
-    }
-}
 
-.all-section-menu-desserts {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2%;
 
-    @media screen and (min-width: map-get($breakpoints, md)) {
-        flex-direction: row;
-    }
-}
+
+
 .menu__button{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
+    margin: 20px 0;
     @include move-animation;
 
     .allmenus {
@@ -156,9 +136,11 @@
     animation-delay: 600ms;
 
 }
-
+.action-resto-button{
+    text-align: center;
+}
 .Menus__button {
-    margin: 10% 50% 10% 20%;
+    margin: 30px 0px;
     width: 50%;
 }
 
