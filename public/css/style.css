@@ -1,11 +1,40 @@
 @keyframes appear {
   from {
-    transform: translateY(0px);
+    transform: translateY(-100px);
     opacity: 0;
   }
   to {
     opacity: 1;
-    transform: translateY(100px);
+    transform: translateY(0);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 10;
+    transform: rotate(0deg);
+    border-top: 10px solid #9356DC;
+  }
+  25% {
+    transform: rotate(360deg);
+    opacity: 0.95;
+    border-radius: 50%;
+  }
+  75% {
+    border-top: 20px solid #FF79DA;
+    opacity: 1;
+  }
+  85% {
+    transform: rotate(720deg);
+    border-radius: 50%;
+    border-top: 30px solid #9356DC;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+    border-radius: 50%;
+    transform: rotate(720deg);
+    border-top: 20px solid #9356DC;
   }
 }
 *,
@@ -72,18 +101,24 @@ body {
 }
 
 .container-check {
+  flex: 0;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
   width: 70px;
   margin-top: -10px;
   margin-bottom: -10px;
-  margin-right: 10px;
+  margin-right: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition-duration: 500ms;
+  cursor: pointer;
 }
 .container-check:hover {
-  cursor: pointer;
+  opacity: 1;
+  flex: 25%;
+  transform: translateX(0px);
 }
 
 .fa-circle-check {
@@ -91,6 +126,10 @@ body {
   background-color: white;
   color: #99E2D0;
   border-radius: 50%;
+}
+.fa-circle-check:hover {
+  transform: rotate(360deg);
+  transition: transform 700ms;
 }
 
 .card {
@@ -183,58 +222,33 @@ body {
   right: 20px;
 }
 
-#loader__rules {
-  width: 300px;
-  height: 300px;
-  border: 20px solid #9356DC;
-  border-radius: 50%;
-  animation-name: spin;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(4, 2.08, 0.55, 0.44);
-  animation-fill-mode: forwards;
-  position: absolute;
-  margin: auto auto;
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
   left: 0;
-  right: 0;
   top: 0;
-  bottom: 0;
-  box-shadow: 5px 10px #99e2d0;
+  background-color: rgb(233, 228, 228);
+  animation: loader 0.03s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    border-top: 10px solid #9356dc;
-    opacity: 1;
-    box-shadow: 5px 40px #99e2d0;
-  }
-  50% {
-    transform: rotate(360deg);
-    border-top: 20px solid #FF79DA;
-    opacity: 0.95;
-    box-shadow: 15px 10px #99e2d0;
-    border-radius: 50%;
-  }
-  74% {
-    border-radius: 30%;
-  }
-  75% {
-    transform: rotate(540deg);
-    opacity: 0.9;
-    box-shadow: 5px 10px #99e2d0;
-  }
-  85% {
-    border-radius: 50%;
-  }
-  100% {
-    border-radius: 50%;
-    transform: rotate(720deg);
-    border-top: 30px solid #9356DC;
-    opacity: 0;
-    box-shadow: 25px 35px #99e2d0;
-  }
+.loader__container {
+  height: 250px;
+  width: 250px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  animation: loader 3s;
+  animation-iteration-count: 1;
+  animation-duration: 2500ms;
+  z-index: -1;
 }
+
 .header__logo {
   width: 150px;
   display: block;
@@ -488,34 +502,10 @@ form ::-webkit-input-placeholder {
   }
 }
 
-.Menu__entrees__second-title {
+.Menu-choix__second-title {
   padding: 20px;
 }
-.Menu__entrees__second-title::after {
-  content: "";
-  display: block;
-  background-color: #99E2D0;
-  width: 30px;
-  height: 3px;
-  margin-top: 5px;
-}
-
-.Menu__plats__second-title {
-  padding: 20px;
-}
-.Menu__plats__second-title::after {
-  content: "";
-  display: block;
-  background-color: #99E2D0;
-  width: 30px;
-  height: 3px;
-  margin-top: 5px;
-}
-
-.Menu__desserts__second-title {
-  padding: 20px;
-}
-.Menu__desserts__second-title::after {
+.Menu-choix__second-title::after {
   content: "";
   display: block;
   background-color: #99E2D0;
@@ -531,14 +521,13 @@ form ::-webkit-input-placeholder {
 }
 
 .menu__button {
+  min-width: 290px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
   margin: 20px 0;
-  animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
+  overflow: hidden;
 }
 .menu__button .allmenus {
   display: flex;
@@ -550,30 +539,50 @@ form ::-webkit-input-placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 120px;
 }
 .menu__button .p1 {
   font-weight: bold;
   padding: 4% 0 2% 0;
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__button .p2 {
   padding: 0 0 2% 0;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__button .menu__byline {
   align-items: flex-end;
   display: flex;
+  flex: 0;
 }
 .menu__button .menu__byline .price {
   display: inline-block;
 }
 
+.menu__button__entrees {
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+}
+
 .menu__button__plats {
-  animation-delay: 300ms;
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 500ms;
 }
 
 .menu__button__desserts {
-  animation-delay: 600ms;
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 800ms;
 }
 
 .action-resto-button {

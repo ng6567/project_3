@@ -28,40 +28,17 @@
   
 
 }
-
-
-
-@mixin second-title {
-   &__second-title {
-
-      padding: 20px;
-
-   }
-
-   &__second-title::after {
-      content: "";
-      display: block;
-      background-color: #99E2D0;
-      width: 30px;
-      height: 3px;
-      margin-top: 5px;
-
-   }
-
-}
-@mixin move-animation  {
-      animation-name: appear;
+@mixin appear-menus {
+   animation-name: appear;
     animation-duration: 1000ms;
     animation-fill-mode: backwards;
 }
-@keyframes appear {
-   from {
-     transform: translateY(0px);
-     opacity: 0;
-   }
-   to {
-     opacity: 1;
-     transform: translateY(100px);
-   }
- }
+@mixin cut-word {
+   white-space:nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+
+
 

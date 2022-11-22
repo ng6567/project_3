@@ -1,58 +1,29 @@
-
-  
-  #loader__rules{
-
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color:$color-background;
+    animation: loader 0.03s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    display:flex;
+    align-items:center;
+    justify-content:center;}
    
-  width: 300px;
-  height: 300px;
-  border: 20px solid $color-primary;
-  border-radius: 50%;
-  animation-name: spin;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(4,2.08,.55,.44);
-  animation-fill-mode: forwards;
-  position: absolute;
-  margin: auto auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  box-shadow: 5px 10px #99e2d0;
-  }
-  
-  @keyframes spin {
-   0%{
-    transform: rotate(0deg);
-    border-top: 10px solid #9356dc;
-    opacity: 1;
-    box-shadow: 5px 40px #99e2d0;
-   } 
+    .loader__container{
+        height: 250px;
+        width: 250px;
+        border: 10px solid transparent;
+        border-radius: 50%;
+        animation: loader 3s;
+        animation-iteration-count: 1;
+        animation-duration: 2500ms;
+        z-index: -1;}
     
-    50% {
-    transform: rotate(360deg);
-    border-top: 20px solid #FF79DA;
-    opacity: 0.95;
-    box-shadow: 15px 10px #99e2d0;
-    border-radius: 50%;
-}
     
-    74% {
-      border-radius: 30%;
-    }
-    75% {
-    transform: rotate(540deg);
-    opacity: 0.9;
-    box-shadow: 5px 10px #99e2d0;
-    }
-    85% {
-      border-radius: 50%;
-    }
-    100% {
-    border-radius: 50%;
-    transform: rotate(720deg);
-    border-top: 30px solid #9356DC;
-    opacity: 0;
-    box-shadow: 25px 35px #99e2d0;
-    }
-  }
+ 
+
+

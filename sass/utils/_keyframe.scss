@@ -1,0 +1,48 @@
+@keyframes appear {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 10;
+    transform: rotate(0deg);
+    border-top: 10px solid $color-primary;
+
+  }
+
+  25% {
+    transform: rotate(360deg);
+    opacity: 0.95;
+    border-radius: 50%;
+  }
+
+  75% {
+
+    border-top: 20px solid $color-secondary;
+    opacity: 1;
+  }
+
+  85% {
+    transform: rotate(720deg);
+    border-radius: 50%;
+    border-top: 30px solid $color-primary;
+
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -10;
+    border-radius: 50%;
+    transform: rotate(720deg);
+    border-top: 20px solid $color-primary;
+  }
+}

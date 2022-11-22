@@ -52,22 +52,21 @@
     }
 }
 
-.Menu__entrees {
-
-    @include second-title;
+.Menu-choix__second-title{
+   
+    padding: 20px;
+   
+   &::after {
+        content: "";
+        display: block;
+        background-color: #99E2D0;
+        width: 30px;
+        height: 3px;
+        margin-top: 5px;
+  
+     }
 }
-
-
-.Menu__plats {
-
-    @include second-title;
-
-}
-
-.Menu__desserts {
-
-    @include second-title;
-}
+    
 
 .all-section-Menus{
     display: flex;
@@ -75,46 +74,49 @@
     align-items: center;
 }
 
-
-
-
-
-
 .menu__button{
+    min-width: 290px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
     margin: 20px 0;
-    @include move-animation;
+    overflow: hidden;
+    
 
+    
     .allmenus {
         display: flex;
         justify-content: space-between;
         padding-right: 10px;
         width: 100%;
-
+       
     }
     .menu-paragraphe {
 
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 120px;
+       
     }
     .p1 {
         font-weight: bold;
         padding: 4% 0 2% 0;
         font-size: 18px;
+        @include cut-word
+        
     }
 
     .p2 {
         padding: 0 0 2% 0;
         font-size: 15px;
-       
+        @include cut-word
     }
     .menu__byline {
         align-items: flex-end;
         display: flex;
+        flex:0;
 
 
         .price {
@@ -123,17 +125,20 @@
 
     }
 }
+.menu__button__entrees{
+    @include appear-menus;
 
+}
 .menu__button__plats {
-
-    animation-delay: 300ms;
+    @include appear-menus;
+    animation-delay: 500ms;
 
     
 }
 
 .menu__button__desserts {
-    
-    animation-delay: 600ms;
+    @include appear-menus;
+    animation-delay: 800ms;
 
 }
 .action-resto-button{
@@ -146,4 +151,5 @@
 
 .fa-check {
     padding-left: 2px;
+    
 }
