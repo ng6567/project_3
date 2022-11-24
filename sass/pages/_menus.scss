@@ -75,7 +75,7 @@
 }
 
 .menu__button{
-    min-width: 290px;
+    min-width: 350px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -89,7 +89,7 @@
         display: flex;
         justify-content: space-between;
         padding-right: 10px;
-        width: 100%;
+        width: 80%;
        
     }
     .menu-paragraphe {
@@ -97,20 +97,23 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 120px;
+        width: 80%;
        
     }
     .p1 {
         font-weight: bold;
         padding: 4% 0 2% 0;
-        font-size: 18px;
+        font-size: 15px;
+        
         @include cut-word
+        
         
     }
 
     .p2 {
         padding: 0 0 2% 0;
-        font-size: 15px;
+        font-size: 12px;
+        
         @include cut-word
     }
     .menu__byline {
@@ -126,19 +129,60 @@
     }
 }
 .menu__button__entrees{
-    @include appear-menus;
+    &__1
+    {
+        @include appear-menus;
 
+    }
+    &__2
+    {
+        @include appear-menus;
+        animation-delay: 1s;
+    }
+    &__3
+    {
+        @include appear-menus;
+        animation-delay: 1.5s;
+    }
 }
 .menu__button__plats {
-    @include appear-menus;
-    animation-delay: 500ms;
+  
+    &__1
+    {
+        @include appear-menus;
+        animation-delay: 2s;
+    }
+    &__2
+    {
+        @include appear-menus;
+        animation-delay: 2.5s;
+    }
+    &__3
+    {
+        @include appear-menus;
+        animation-delay: 3s;
+    }
 
     
 }
 
 .menu__button__desserts {
-    @include appear-menus;
-    animation-delay: 800ms;
+  
+    &__1
+    {
+        @include appear-menus;
+        animation-delay: 3.5s;
+    }
+    &__2
+    {
+        @include appear-menus;
+        animation-delay: 4s;
+    }
+    &__3
+    {
+        @include appear-menus;
+        animation-delay: 4.5s;
+    }
 
 }
 .action-resto-button{

@@ -1,6 +1,6 @@
 {
     "workbench.view.alwaysShowHeaderActions": false,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 0,
     "zenMode.fullScreen": true,
     "liveServer.settings.fullReload": false,
     "vscode-edge-devtools.headless": true

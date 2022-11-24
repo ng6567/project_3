@@ -30,8 +30,10 @@
 }
 @mixin appear-menus {
    animation-name: appear;
-    animation-duration: 1000ms;
+    animation-duration: 2000ms;
     animation-fill-mode: backwards;
+    
+    
 }
 @mixin cut-word {
    white-space:nowrap;

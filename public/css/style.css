@@ -1,11 +1,9 @@
 @keyframes appear {
   from {
-    transform: translateY(-100px);
     opacity: 0;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 @keyframes loader {
@@ -104,7 +102,7 @@ body {
   flex: 0;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
-  width: 70px;
+  width: 0px;
   margin-top: -10px;
   margin-bottom: -10px;
   margin-right: -10px;
@@ -117,7 +115,7 @@ body {
 }
 .container-check:hover {
   opacity: 1;
-  flex: 25%;
+  flex: 40%;
   transform: translateX(0px);
 }
 
@@ -287,7 +285,7 @@ form ::-webkit-input-placeholder {
 }
 .footer__logo {
   filter: invert(1);
-  width: 25%;
+  width: 15%;
   padding: 20px;
 }
 .footer__list li {
@@ -521,7 +519,7 @@ form ::-webkit-input-placeholder {
 }
 
 .menu__button {
-  min-width: 290px;
+  min-width: 350px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -533,25 +531,25 @@ form ::-webkit-input-placeholder {
   display: flex;
   justify-content: space-between;
   padding-right: 10px;
-  width: 100%;
+  width: 80%;
 }
 .menu__button .menu-paragraphe {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 120px;
+  width: 80%;
 }
 .menu__button .p1 {
   font-weight: bold;
   padding: 4% 0 2% 0;
-  font-size: 18px;
+  font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu__button .p2 {
   padding: 0 0 2% 0;
-  font-size: 15px;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -565,24 +563,60 @@ form ::-webkit-input-placeholder {
   display: inline-block;
 }
 
-.menu__button__entrees {
+.menu__button__entrees__1 {
   animation-name: appear;
-  animation-duration: 1000ms;
+  animation-duration: 2000ms;
   animation-fill-mode: backwards;
 }
-
-.menu__button__plats {
+.menu__button__entrees__2 {
   animation-name: appear;
-  animation-duration: 1000ms;
+  animation-duration: 2000ms;
   animation-fill-mode: backwards;
-  animation-delay: 500ms;
+  animation-delay: 1s;
+}
+.menu__button__entrees__3 {
+  animation-name: appear;
+  animation-duration: 2000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 1.5s;
 }
 
-.menu__button__desserts {
+.menu__button__plats__1 {
   animation-name: appear;
-  animation-duration: 1000ms;
+  animation-duration: 2000ms;
   animation-fill-mode: backwards;
-  animation-delay: 800ms;
+  animation-delay: 2s;
+}
+.menu__button__plats__2 {
+  animation-name: appear;
+  animation-duration: 2000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 2.5s;
+}
+.menu__button__plats__3 {
+  animation-name: appear;
+  animation-duration: 2000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 3s;
+}
+
+.menu__button__desserts__1 {
+  animation-name: appear;
+  animation-duration: 2000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 3.5s;
+}
+.menu__button__desserts__2 {
+  animation-name: appear;
+  animation-duration: 2000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 4s;
+}
+.menu__button__desserts__3 {
+  animation-name: appear;
+  animation-duration: 2000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 4.5s;
 }
 
 .action-resto-button {
