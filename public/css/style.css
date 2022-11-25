@@ -285,7 +285,7 @@ form ::-webkit-input-placeholder {
 }
 .footer__logo {
   filter: invert(1);
-  width: 15%;
+  width: 25%;
   padding: 20px;
 }
 .footer__list li {
@@ -345,7 +345,7 @@ form ::-webkit-input-placeholder {
 }
 .section-1__second-title {
   margin: 40px 30px 30px 20px;
-  width: 100%;
+  width: 80%;
 }
 .section-1 .function-1 {
   display: flex;
